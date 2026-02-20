@@ -11,7 +11,10 @@ struct GetClockStateUseCaseTests {
   init() {
     transformUseCase = TransformTimeToClockStateUseCase()
     timeProvider = TimeTrackingProviderMock()
-    sut = GetClockStateUseCase()
+    sut = GetClockStateUseCase(
+      transformUseCase: transformUseCase,
+      timeProvider: timeProvider
+    )
   }
 
 }
