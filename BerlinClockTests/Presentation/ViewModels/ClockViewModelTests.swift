@@ -6,9 +6,11 @@ import Testing
 struct ClockViewModelTests {
 
   let sut: ClockViewModel!
+  let getStateUseCase: GetClockStateUseCaseMock!
 
   init() {
-    sut = ClockViewModel()
+    getStateUseCase = GetClockStateUseCaseMock()
+    sut = ClockViewModel(getStateUseCase: getStateUseCase)
   }
 
   @Test
