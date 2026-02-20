@@ -13,23 +13,19 @@ class TransformTimeToClockStateUseCase {
   }
 
   private func calculateFiveHoursBlocks(from time: Time) -> [Bool] {
-    let isActive = { (index: Int) in index < (time.hours / 5) }
-    return (0..<4).map { isActive($0) }
+    (0..<4).map { $0 < (time.hours / 5) }
   }
 
   private func calculateOneHourBlocks(from time: Time) -> [Bool] {
-    let isActive = { (index: Int) in index < (time.hours % 5) }
-    return (0..<4).map { isActive($0) }
+    (0..<4).map { $0 < (time.hours % 5) }
   }
 
   private func calculateFiveMinutesBlocks(from time: Time) -> [Bool] {
-    let isActive = { (index: Int) in index < (time.minutes / 5) }
-    return (0..<11).map { isActive($0) }
+    (0..<11).map { $0 < (time.minutes / 5) }
   }
 
   private func calculateOneMinuteBlocks(from time: Time) -> [Bool] {
-    let isActive = { (index: Int) in index < (time.minutes % 5) }
-    return (0..<4).map { isActive($0) }
+    (0..<4).map { $0 < (time.minutes % 5) }
   }
 
   private func calculateSeconds(from time: Time) -> Bool {
