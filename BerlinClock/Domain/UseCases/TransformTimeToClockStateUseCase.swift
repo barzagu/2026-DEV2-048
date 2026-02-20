@@ -1,3 +1,5 @@
 import Foundation
 
-class TransformTimeToClockStateUseCase {}
+class TransformTimeToClockStateUseCase {
+  func transform(_ time: Time) {}
+}
