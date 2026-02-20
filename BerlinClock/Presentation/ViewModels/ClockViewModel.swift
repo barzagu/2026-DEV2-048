@@ -8,4 +8,6 @@ class ClockViewModel {
   init(getStateUseCase: GetClockStateUseCaseProtocol) {
     self.getStateUseCase = getStateUseCase
   }
+
+  func startClock() {}
 }
