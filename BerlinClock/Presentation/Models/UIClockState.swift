@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct UIClockState {
+struct UIClockState: Equatable {
   let time: String
   let fiveHoursBlocks: [Color]
   let oneHourBlocks: [Color]

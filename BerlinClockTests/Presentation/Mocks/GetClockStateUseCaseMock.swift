@@ -8,4 +8,8 @@ class GetClockStateUseCaseMock: GetClockStateUseCaseProtocol {
   func send(_ state: ClockState) {
     stateSubject.send(state)
   }
+
+  func getState() -> AnyPublisher<BerlinClock.ClockState, Never> {
+    stateSubject.eraseToAnyPublisher()
+  }
 }
