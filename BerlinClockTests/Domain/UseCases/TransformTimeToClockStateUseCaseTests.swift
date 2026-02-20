@@ -12,13 +12,13 @@ struct TransformTimeToClockStateUseCaseTests {
 
   @Test
   func test_transforming_time_to_clock_states() {
-    let inputValues: [Time] = [
+    let inputs: [Time] = [
       .init(hours: 0, minutes: 0, seconds: 0),
       .init(hours: 10, minutes: 10, seconds: 10),
       .init(hours: 23, minutes: 59, seconds: 59)
     ]
-    var outputValues: [ClockState] = []
-    let expectedOutputValues: [ClockState] = [
+    var outputs: [ClockState] = []
+    let expectedOutputs: [ClockState] = [
       .init(
         time: .init(hours: 0, minutes: 0, seconds: 0),
         fiveHoursBlocks: [false, false, false, false],
@@ -45,12 +45,9 @@ struct TransformTimeToClockStateUseCaseTests {
       )
     ]
 
-    for inputValue in inputValues {
-      let outputValue: ClockState = sut.transform(inputValue)
-      outputValues.append(outputValue)
-    }
+    inputs.forEach { outputs.append(sut.transform($0)) }
 
-    #expect(outputValues == expectedOutputValues)
+    #expect(outputs == expectedOutputs)
   }
 
 }
