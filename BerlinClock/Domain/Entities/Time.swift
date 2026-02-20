@@ -1,6 +1,6 @@
 import Foundation
 
-struct Time {
+struct Time: Equatable {
   let hours: Int
   let minutes: Int
   let seconds: Int
