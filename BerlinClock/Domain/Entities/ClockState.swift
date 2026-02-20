@@ -1,6 +1,6 @@
 import Foundation
 
-struct ClockState {
+struct ClockState: Equatable {
   let time: Time
   let fiveHoursBlocks: [Bool]
   let oneHourBlocks: [Bool]
