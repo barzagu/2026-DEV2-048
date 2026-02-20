@@ -17,7 +17,7 @@ struct TransformTimeToClockStateUseCaseTests {
       .init(hours: 10, minutes: 10, seconds: 10),
       .init(hours: 23, minutes: 59, seconds: 59)
     ]
-    let outputValues: [ClockState] = []
+    var outputValues: [ClockState] = []
     let expectedOutputValues: [ClockState] = [
       .init(
         time: .init(hours: 0, minutes: 0, seconds: 0),
@@ -47,7 +47,10 @@ struct TransformTimeToClockStateUseCaseTests {
 
     for inputValue in inputValues {
       let outputValue: ClockState = sut.transform(inputValue)
+      outputValues.append(outputValue)
     }
+
+    #expect(outputValues == expectedOutputValues)
   }
 
 }
