@@ -15,7 +15,7 @@ struct TimeParsingProviderTests {
   @Test
   func test_parsing_time_from_date() {
     let date = calendar.date(from: .init(hour: 23, minute: 59, second: 59))!
-    let time = sut.parse(from: date)
+    let time: Time = sut.parse(from: date)
   }
 
 }
