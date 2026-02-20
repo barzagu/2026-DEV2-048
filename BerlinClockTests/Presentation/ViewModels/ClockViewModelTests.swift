@@ -75,6 +75,8 @@ struct ClockViewModelTests {
 
     sut.$clockState.dropFirst().sink { outputs.append($0!) }.store(in: &cancellables)
     inputs.forEach { getStateUseCase.send($0) }
+
+    #expect(outputs == expectedOutputs)
   }
 
 }
