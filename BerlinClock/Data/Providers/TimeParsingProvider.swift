@@ -1,3 +1,6 @@
 import Foundation
 
-class TimeParsingProvider {}
+class TimeParsingProvider {
+  func parse(from date: Date) {
+  }
+}
