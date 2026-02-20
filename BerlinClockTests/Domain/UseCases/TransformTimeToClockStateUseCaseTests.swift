@@ -44,6 +44,10 @@ struct TransformTimeToClockStateUseCaseTests {
         seconds: false
       )
     ]
+
+    for inputValue in inputValues {
+      let outputValue = sut.transform(inputValue)
+    }
   }
 
 }
