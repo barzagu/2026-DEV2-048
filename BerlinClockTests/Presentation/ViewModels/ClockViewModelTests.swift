@@ -1,3 +1,4 @@
+import Combine
 import SwiftUI
 import Testing
 
@@ -68,6 +69,9 @@ struct ClockViewModelTests {
         seconds: .clear
       )
     ]
+    var cancellables = Set<AnyCancellable>()
+
+    sut.$clockState.sink { outputs.append($0) }.store(in: &cancellables)
   }
 
 }
