@@ -23,7 +23,7 @@ struct GetClockStateUseCaseTests {
     let inputs: [Time] = (1...4).map { _ in
         .init(hours: 23, minutes: 59, seconds: 59)
     }
-    let outputs: [ClockState] = []
+    var outputs: [ClockState] = []
     let expectedOutputs: [ClockState] = (1...4).map { _ in
       .init(
         time: .init(hours: 23, minutes: 59, seconds: 59),
@@ -35,7 +35,10 @@ struct GetClockStateUseCaseTests {
       )
     }
 
-    let cancellable = sut.getState().sink { _ in }
+    let cancellable = sut.getState().sink { outputs.append($0) }
+    inputs.forEach { timeProvider.send($0) }
+
+    #expect(outputs == expectedOutputs)
   }
 
 }

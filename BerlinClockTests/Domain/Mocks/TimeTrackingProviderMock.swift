@@ -1,3 +1,11 @@
+import Combine
+
 @testable import BerlinClock
 
-class TimeTrackingProviderMock: TimeTrackingProviderProtocol {}
+class TimeTrackingProviderMock: TimeTrackingProviderProtocol {
+  private let timeSubject = PassthroughSubject<Time, Never>()
+
+  func send(_ time: Time) {
+    timeSubject.send(time)
+  }
+}
