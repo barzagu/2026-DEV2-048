@@ -8,4 +8,8 @@ class TimeTrackingProviderMock: TimeTrackingProviderProtocol {
   func send(_ time: Time) {
     timeSubject.send(time)
   }
+
+  func start() -> AnyPublisher<Time, Never> {
+    timeSubject.eraseToAnyPublisher()
+  }
 }
