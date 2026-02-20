@@ -34,8 +34,9 @@ struct GetClockStateUseCaseTests {
         seconds: false
       )
     }
+    var cancellables = Set<AnyCancellable>()
 
-    let cancellable = sut.getState().sink { outputs.append($0) }
+    sut.getState().sink { outputs.append($0) }.store(in: &cancellables)
     inputs.forEach { timeProvider.send($0) }
 
     #expect(outputs == expectedOutputs)
