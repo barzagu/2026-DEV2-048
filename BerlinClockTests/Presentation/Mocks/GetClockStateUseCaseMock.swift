@@ -1,3 +1,3 @@
 @testable import BerlinClock
 
-class GetClockStateUseCaseMock {}
+class GetClockStateUseCaseMock: GetClockStateUseCaseProtocol {}
