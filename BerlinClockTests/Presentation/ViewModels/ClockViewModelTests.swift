@@ -71,7 +71,10 @@ struct ClockViewModelTests {
     ]
     var cancellables = Set<AnyCancellable>()
 
+    sut.startClock()
+
     sut.$clockState.dropFirst().sink { outputs.append($0!) }.store(in: &cancellables)
+    inputs.forEach { getStateUseCase.send($0) }
   }
 
 }
