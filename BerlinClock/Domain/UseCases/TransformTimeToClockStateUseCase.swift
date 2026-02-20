@@ -1,5 +1,3 @@
-import Foundation
-
 class TransformTimeToClockStateUseCase {
   let fiveHoursBlocks = (1...4)
   let oneHourBlocks = (1...4)
