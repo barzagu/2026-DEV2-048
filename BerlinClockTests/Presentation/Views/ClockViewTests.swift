@@ -4,8 +4,12 @@ import Testing
 
 struct ClockViewTests {
   let sut: ClockView!
+  let viewModel: ClockViewModel!
+  let getStateUseCase: GetClockStateUseCaseMock!
 
   init() {
-    sut = ClockView()
+    getStateUseCase = GetClockStateUseCaseMock()
+    viewModel = ClockViewModel(getStateUseCase: getStateUseCase)
+    sut = ClockView(viewModel: viewModel)
   }
 }
