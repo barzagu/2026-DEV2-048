@@ -3,6 +3,7 @@ import Testing
 
 @testable import BerlinClock
 
+@MainActor
 struct GetClockStateUseCaseTests {
 
   let sut: GetClockStateUseCase!

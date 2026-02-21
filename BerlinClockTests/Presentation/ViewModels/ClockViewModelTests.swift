@@ -4,6 +4,7 @@ import Testing
 
 @testable import BerlinClock
 
+@MainActor
 struct ClockViewModelTests {
 
   let sut: ClockViewModel!

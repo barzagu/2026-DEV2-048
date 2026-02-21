@@ -2,6 +2,7 @@ import Testing
 
 @testable import BerlinClock
 
+@MainActor
 struct TransformTimeToClockStateUseCaseTests {
 
   let sut: TransformTimeToClockStateUseCase!
