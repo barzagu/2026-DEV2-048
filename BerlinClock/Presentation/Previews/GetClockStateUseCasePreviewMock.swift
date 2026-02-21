@@ -16,7 +16,7 @@ private extension ClockState {
   static let `default`: Self = .init(
     time: .init(hours: 12, minutes: 57, seconds: 10),
     fiveHoursBlocks: [true, true, false, false],
-    oneHourBlocks: [false, false, false, false],
+    oneHourBlocks: [true, true, false, false],
     fiveMinutesBlocks: [true, true, true, true, true, true, true, true, true, true, true],
     oneMinuteBlocks: [true, true, false, false],
     seconds: true

@@ -46,7 +46,7 @@ struct ClockViewTests {
   func test_view_correctly_reflects_clock_state() {
     inputs.forEach {
       viewModel.clockState = $0
-      assertSnapshot(of: sut, as: .image, named: $0.time)
+      assertSnapshot(of: sut, as: .image(layout: .device(config: .iPhoneX)), named: $0.time)
     }
   }
 }
