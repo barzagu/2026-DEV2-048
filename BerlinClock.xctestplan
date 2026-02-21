@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "3D854833-2584-48B4-98C3-A2E62D703F59",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BerlinClock.xcodeproj",
+      "identifier" : "4ADDAA552F48701B00858638",
+      "name" : "BerlinClock"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BerlinClock.xcodeproj",
+        "identifier" : "4A8AB83D2F4874CD0079258E",
+        "name" : "BerlinClockTests"
+      }
+    }
+  ],
+  "version" : 1
+}

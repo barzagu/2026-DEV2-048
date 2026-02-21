@@ -21,6 +21,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A63BD682F49D4D90091A185 /* BerlinClock.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = BerlinClock.xctestplan; sourceTree = "<group>"; };
 		4A8AB83E2F4874CD0079258E /* BerlinClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ADDAA562F48701B00858638 /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -60,6 +61,7 @@
 		4ADDAA4D2F48701B00858638 = {
 			isa = PBXGroup;
 			children = (
+				4A63BD682F49D4D90091A185 /* BerlinClock.xctestplan */,
 				4ADDAA582F48701B00858638 /* BerlinClock */,
 				4A8AB83F2F4874CD0079258E /* BerlinClockTests */,
 				4ADDAA572F48701B00858638 /* Products */,
