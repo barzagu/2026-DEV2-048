@@ -42,8 +42,11 @@ class ClockViewModel {
   }
 
   private func calculateFiveMinutesBlocks(from state: ClockState) -> [Color] {
-    state.fiveMinutesBlocks.enumerated().map { (index, block) in
-      block ? ((index + 1) % 3 == 0 ? .red : .yellow) : .clear
+    let colorForActive = { (index: Int) -> Color in
+      index.isMultiple(of: 3) ? .red : .yellow
+    }
+    return state.fiveMinutesBlocks.enumerated().map { (index, block) in
+      block ? colorForActive(index + 1) : .clear
     }
   }
 
