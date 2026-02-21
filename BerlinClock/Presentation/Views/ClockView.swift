@@ -22,7 +22,7 @@ struct ClockView: View {
   func clockView(from state: UIClockState) -> some View {
     VStack(spacing: 8) {
       VStack(spacing: 8) {
-        topLampView(with: state.seconds)
+        TopLampView(color: state.seconds)
         lampsRowView(with: state.fiveHoursBlocks)
         lampsRowView(with: state.oneHourBlocks)
         lampsRowView(with: state.fiveMinutesBlocks)
@@ -30,13 +30,6 @@ struct ClockView: View {
       }
       Text(state.time).font(.title)
     }
-  }
-
-  func topLampView(with color: Color) -> some View {
-    Circle()
-      .fill(color)
-      .stroke(.black, lineWidth: 2)
-      .frame(width: 48, height: 48)
   }
 
   func lampsRowView(with colors: [Color]) -> some View {
