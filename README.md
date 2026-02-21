@@ -3,7 +3,7 @@
 [![Swift](https://img.shields.io/badge/Swift-5-orange.svg)](https://swift.org)
 [![iOS](https://img.shields.io/badge/iOS-26.1-blue.svg)](https://www.apple.com/ca/os/ios/)
 [![Xcode](https://img.shields.io/badge/Xcode-26.1.1-blue.svg)](https://developer.apple.com/xcode/)
-[![Coverage](https://img.shields.io/badge/Coverage-96.6%-green.svg)]()
+[![Coverage](https://img.shields.io/badge/Coverage-96.6%25-green.svg)]()
 
 Implementation of the [Berlin Clock Kata](https://agilekatas.co.uk/katas/BerlinClock-Kata) for iOS using **SwiftUI**, **Combine**, and **SwiftTesting**, following **TDD** and **Clean Architecture** practices.
 
