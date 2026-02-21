@@ -1,6 +1,6 @@
 import Combine
 
-class GetClockStateUseCase {
+class GetClockStateUseCase: GetClockStateUseCaseProtocol {
   private let transformUseCase: TransformTimeToClockStateUseCase
   private let timeProvider: TimeTrackingProviderProtocol
 
