@@ -23,23 +23,12 @@ struct ClockView: View {
     VStack(spacing: 8) {
       VStack(spacing: 8) {
         TopLampView(color: state.seconds)
-        lampsRowView(with: state.fiveHoursBlocks)
-        lampsRowView(with: state.oneHourBlocks)
-        lampsRowView(with: state.fiveMinutesBlocks)
-        lampsRowView(with: state.oneMinuteBlocks)
+        LampsRowView(colors: state.fiveHoursBlocks)
+        LampsRowView(colors: state.oneHourBlocks)
+        LampsRowView(colors: state.fiveMinutesBlocks)
+        LampsRowView(colors: state.oneMinuteBlocks)
       }
       Text(state.time).font(.title)
-    }
-  }
-
-  func lampsRowView(with colors: [Color]) -> some View {
-    HStack {
-      ForEach(colors.enumerated(), id: \.offset) {
-        Rectangle()
-          .fill($0.element)
-          .stroke(.black, lineWidth: 2)
-          .frame(height: 48)
-      }
     }
   }
 }
