@@ -1,17 +1,15 @@
-//
-//  BerlinClockApp.swift
-//  BerlinClock
-//
-//  Created by Alejandro Zamudio Guajardo on 20/2/26.
-//
-
 import SwiftUI
 
 @main
 struct BerlinClockApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  let stateUseCase = GetClockStateUseCase(
+    transformUseCase: TransformTimeToClockStateUseCase(),
+    timeProvider: TimeTrackingProvider(parsingProvider: TimeParsingProvider())
+  )
+
+  var body: some Scene {
+    WindowGroup {
+      ClockView(viewModel: ClockViewModel(getStateUseCase: stateUseCase))
     }
+  }
 }
