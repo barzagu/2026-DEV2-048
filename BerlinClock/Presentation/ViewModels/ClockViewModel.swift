@@ -1,7 +1,7 @@
 import Combine
 import SwiftUI
 
-class ClockViewModel {
+class ClockViewModel: ObservableObject {
   @Published var clockState: UIClockState?
 
   private let getStateUseCase: GetClockStateUseCaseProtocol
