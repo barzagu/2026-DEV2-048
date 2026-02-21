@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4A8AB9172F49B1070079258E /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 4A8AB9162F49B1070079258E /* SnapshotTesting */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4A8AB8422F4874CD0079258E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8AB9172F49B1070079258E /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,7 @@
 			);
 			name = BerlinClockTests;
 			packageProductDependencies = (
+				4A8AB9162F49B1070079258E /* SnapshotTesting */,
 			);
 			productName = BerlinClockTests;
 			productReference = 4A8AB83E2F4874CD0079258E /* BerlinClockTests.xctest */;
@@ -150,6 +156,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				4A8AB8472F48761F0079258E /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				4A8AB9152F49B1070079258E /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4ADDAA572F48701B00858638 /* Products */;
@@ -475,6 +482,14 @@
 				minimumVersion = 0.63.2;
 			};
 		};
+		4A8AB9152F49B1070079258E /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.18.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -487,6 +502,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A8AB8472F48761F0079258E /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		4A8AB9162F49B1070079258E /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A8AB9152F49B1070079258E /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
